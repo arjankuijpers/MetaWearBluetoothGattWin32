@@ -3,6 +3,7 @@
 
 #include "metawear\peripheral\led.h"
 #include "metawear\sensor\switch.h"
+#include "metawear\sensor\multichanneltemperature.h"
 #include "metawear\core\datasignal.h"
 
 Application::Application()
@@ -19,7 +20,13 @@ bool Application::Initialize()
 	m_profile.Initialize(GUID_METAWEAR_SERVICE);
 	m_profileDeviceInfo.Initialize(GUID_DEVICE_INFO_SERVICE);
 
-	m_mwDevice.Initialize(&m_profile, &m_profileDeviceInfo);
+	if (!m_mwDevice.Initialize(&m_profile, &m_profileDeviceInfo))
+	{
+		std::cout << "Failed Initializing MWDevice." << std::endl;
+		std::cout << "Press enter to continue..." << std::endl;
+		std::cin.get();
+		return false;
+	}
 
 
 	MblMwLedPattern pattern;
@@ -43,6 +50,17 @@ bool Application::Initialize()
 
 	auto switch_signal = mbl_mw_switch_get_state_data_signal(m_mwDevice.GetMetaWearBoard());
 	mbl_mw_datasignal_subscribe(switch_signal, nullptr, data_handler);
+
+	// Retrieve data signal for on board thermistor source
+	// not valid for R boards
+	auto temp_signal = mbl_mw_multi_chnl_temp_get_temperature_data_signal(m_mwDevice.GetMetaWearBoard(),
+		MBL_MW_METAWEAR_RPRO_CHANNEL_ON_BOARD_THERMISTOR);
+	mbl_mw_datasignal_subscribe(temp_signal, nullptr, [](void* context, const MblMwData* data) {
+		// cast to float*
+		printf("%.3fC\n", *((float*)data->value));
+	});
+	mbl_mw_datasignal_read(temp_signal);
+
 
 	while (1) {
 		Sleep(1000);

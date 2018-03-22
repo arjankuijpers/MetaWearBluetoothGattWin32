@@ -28,6 +28,13 @@ bool MWDevice::Initialize(Profile * a_profile, Profile* a_profileDevInfo)
 	m_profile = a_profile;
 	m_profileDevInfo = a_profileDevInfo;
 
+	if (m_profile->m_services.size() == 0 || m_profile->m_services.size() == 0)
+	{
+		// no services available, meaning couldnt connect to metaboard.
+		printf("Couldnt connect to MetaWear board, did you connect your device in the Windows bluetooth settings ? \n");
+		return false;
+	}
+
 	//PrintAllCharacteristics();
 
 	m_btle_conn = { this, MWDevice::write_gatt_char_v2, MWDevice::read_gatt_char_v2, MWDevice::enable_char_notify, MWDevice::on_disconnect };
