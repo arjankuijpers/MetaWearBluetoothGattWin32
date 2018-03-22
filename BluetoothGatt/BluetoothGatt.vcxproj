@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{C4957B7E-CD0D-4EAF-A4AE-F89CC933AFE9}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>BluetoothGatt</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)BluetoothGATT\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)BluetoothGATT\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)BluetoothGATT\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)BluetoothGATT\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Characteristic2.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="Descriptor2.h" />
+    <ClInclude Include="Application.h" />
+    <ClInclude Include="MWDevice.h" />
+    <ClInclude Include="Profile.h" />
+    <ClInclude Include="Service2.h" />
+    <ClInclude Include="src\metawear\core\anonymous_datasignal.h" />
+    <ClInclude Include="src\metawear\core\anonymous_datasignal_fwd.h" />
+    <ClInclude Include="src\metawear\core\cpp\anonymous_datasignal_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\constant.h" />
+    <ClInclude Include="src\metawear\core\cpp\datainterpreter.h" />
+    <ClInclude Include="src\metawear\core\cpp\datasignal_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\debug_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\event_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\event_register.h" />
+    <ClInclude Include="src\metawear\core\cpp\logging_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\logging_register.h" />
+    <ClInclude Include="src\metawear\core\cpp\macro_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\macro_register.h" />
+    <ClInclude Include="src\metawear\core\cpp\metawearboard_def.h" />
+    <ClInclude Include="src\metawear\core\cpp\metawearboard_macro.h" />
+    <ClInclude Include="src\metawear\core\cpp\moduleinfo.h" />
+    <ClInclude Include="src\metawear\core\cpp\register.h" />
+    <ClInclude Include="src\metawear\core\cpp\responseheader.h" />
+    <ClInclude Include="src\metawear\core\cpp\settings_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\settings_register.h" />
+    <ClInclude Include="src\metawear\core\cpp\timer_private.h" />
+    <ClInclude Include="src\metawear\core\cpp\timer_register.h" />
+    <ClInclude Include="src\metawear\core\cpp\version.h" />
+    <ClInclude Include="src\metawear\core\data.h" />
+    <ClInclude Include="src\metawear\core\datasignal.h" />
+    <ClInclude Include="src\metawear\core\datasignal_fwd.h" />
+    <ClInclude Include="src\metawear\core\debug.h" />
+    <ClInclude Include="src\metawear\core\event.h" />
+    <ClInclude Include="src\metawear\core\event_fwd.h" />
+    <ClInclude Include="src\metawear\core\logging.h" />
+    <ClInclude Include="src\metawear\core\logging_fwd.h" />
+    <ClInclude Include="src\metawear\core\macro.h" />
+    <ClInclude Include="src\metawear\core\metawearboard.h" />
+    <ClInclude Include="src\metawear\core\metawearboard_fwd.h" />
+    <ClInclude Include="src\metawear\core\model.h" />
+    <ClInclude Include="src\metawear\core\module.h" />
+    <ClInclude Include="src\metawear\core\settings.h" />
+    <ClInclude Include="src\metawear\core\status.h" />
+    <ClInclude Include="src\metawear\core\timer.h" />
+    <ClInclude Include="src\metawear\core\timer_fwd.h" />
+    <ClInclude Include="src\metawear\core\types.h" />
+    <ClInclude Include="src\metawear\dfu\cpp\dfu_operations.h" />
+    <ClInclude Include="src\metawear\dfu\cpp\dfu_operations_details.h" />
+    <ClInclude Include="src\metawear\dfu\cpp\dfu_utility.h" />
+    <ClInclude Include="src\metawear\dfu\cpp\file_operations.h" />
+    <ClInclude Include="src\metawear\dfu\cpp\json.hpp" />
+    <ClInclude Include="src\metawear\dfu\cpp\miniz.h" />
+    <ClInclude Include="src\metawear\peripheral\haptic.h" />
+    <ClInclude Include="src\metawear\peripheral\ibeacon.h" />
+    <ClInclude Include="src\metawear\peripheral\led.h" />
+    <ClInclude Include="src\metawear\peripheral\neopixel.h" />
+    <ClInclude Include="src\metawear\peripheral\peripheral_common.h" />
+    <ClInclude Include="src\metawear\platform\btle_connection.h" />
+    <ClInclude Include="src\metawear\platform\cpp\async_creator.h" />
+    <ClInclude Include="src\metawear\platform\cpp\concurrent_queue.h" />
+    <ClInclude Include="src\metawear\platform\cpp\task.h" />
+    <ClInclude Include="src\metawear\platform\cpp\threadpool.h" />
+    <ClInclude Include="src\metawear\platform\dllmarker.h" />
+    <ClInclude Include="src\metawear\platform\memory.h" />
+    <ClInclude Include="src\metawear\processor\accounter.h" />
+    <ClInclude Include="src\metawear\processor\accumulator.h" />
+    <ClInclude Include="src\metawear\processor\average.h" />
+    <ClInclude Include="src\metawear\processor\buffer.h" />
+    <ClInclude Include="src\metawear\processor\comparator.h" />
+    <ClInclude Include="src\metawear\processor\counter.h" />
+    <ClInclude Include="src\metawear\processor\cpp\dataprocessor_config.h" />
+    <ClInclude Include="src\metawear\processor\cpp\dataprocessor_private.h" />
+    <ClInclude Include="src\metawear\processor\cpp\dataprocessor_register.h" />
+    <ClInclude Include="src\metawear\processor\dataprocessor.h" />
+    <ClInclude Include="src\metawear\processor\dataprocessor_fwd.h" />
+    <ClInclude Include="src\metawear\processor\delta.h" />
+    <ClInclude Include="src\metawear\processor\math.h" />
+    <ClInclude Include="src\metawear\processor\packer.h" />
+    <ClInclude Include="src\metawear\processor\passthrough.h" />
+    <ClInclude Include="src\metawear\processor\processor_common.h" />
+    <ClInclude Include="src\metawear\processor\pulse.h" />
+    <ClInclude Include="src\metawear\processor\rms.h" />
+    <ClInclude Include="src\metawear\processor\rss.h" />
+    <ClInclude Include="src\metawear\processor\sample.h" />
+    <ClInclude Include="src\metawear\processor\threshold.h" />
+    <ClInclude Include="src\metawear\processor\time.h" />
+    <ClInclude Include="src\metawear\sensor\accelerometer.h" />
+    <ClInclude Include="src\metawear\sensor\accelerometer_bosch.h" />
+    <ClInclude Include="src\metawear\sensor\accelerometer_mma8452q.h" />
+    <ClInclude Include="src\metawear\sensor\ambientlight_ltr329.h" />
+    <ClInclude Include="src\metawear\sensor\barometer_bosch.h" />
+    <ClInclude Include="src\metawear\sensor\colordetector_tcs34725.h" />
+    <ClInclude Include="src\metawear\sensor\conductance.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\accelerometer_bosch_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\accelerometer_bosch_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\accelerometer_mma8452q_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\accelerometer_mma8452q_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\accelerometer_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\ambientlight_ltr329_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\ambientlight_ltr329_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\barometer_bosch_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\barometer_bosch_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\colordetector_tcs34725_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\colordetector_tcs34725_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\conductance_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\conductance_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\gpio_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\gpio_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\gyro_bmi160_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\gyro_bmi160_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\humidity_bme280_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\humidity_bme280_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\magnetometer_bmm150_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\magnetometer_bmm150_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\multichanneltemperature_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\multichanneltemperature_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\proximity_tsl2671_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\proximity_tsl2671_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\sensor_fusion_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\sensor_fusion_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\serialpassthrough_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\serialpassthrough_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\switch_private.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\switch_register.h" />
+    <ClInclude Include="src\metawear\sensor\cpp\utils.h" />
+    <ClInclude Include="src\metawear\sensor\gpio.h" />
+    <ClInclude Include="src\metawear\sensor\gyro_bmi160.h" />
+    <ClInclude Include="src\metawear\sensor\humidity_bme280.h" />
+    <ClInclude Include="src\metawear\sensor\i2c.h" />
+    <ClInclude Include="src\metawear\sensor\magnetometer_bmm150.h" />
+    <ClInclude Include="src\metawear\sensor\multichanneltemperature.h" />
+    <ClInclude Include="src\metawear\sensor\proximity_tsl2671.h" />
+    <ClInclude Include="src\metawear\sensor\sensor_common.h" />
+    <ClInclude Include="src\metawear\sensor\sensor_fusion.h" />
+    <ClInclude Include="src\metawear\sensor\spi.h" />
+    <ClInclude Include="src\metawear\sensor\switch.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BluetoothGatt.cpp" />
+    <ClCompile Include="Characteristic2.cpp" />
+    <ClCompile Include="Descriptor2.cpp" />
+    <ClCompile Include="Application.cpp" />
+    <ClCompile Include="MWDevice.cpp" />
+    <ClCompile Include="Profile.cpp" />
+    <ClCompile Include="Service2.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\anonymous_datasignal.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\datasignal.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\debug.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\event.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\logging.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\macro.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\moduleinfo.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\responseheader.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\settings.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\timer.cpp" />
+    <ClCompile Include="src\metawear\core\cpp\version.cpp" />
+    <ClCompile Include="src\metawear\dfu\cpp\dfu_operations.cpp" />
+    <ClCompile Include="src\metawear\dfu\cpp\dfu_operations_details.cpp" />
+    <ClCompile Include="src\metawear\dfu\cpp\dfu_utility.cpp" />
+    <ClCompile Include="src\metawear\dfu\cpp\file_operations.cpp" />
+    <ClCompile Include="src\metawear\dfu\cpp\miniz.cpp" />
+    <ClCompile Include="src\metawear\impl\cpp\datainterpreter.cpp" />
+    <ClCompile Include="src\metawear\impl\cpp\metawearboard.cpp" />
+    <ClCompile Include="src\metawear\peripheral\cpp\haptic.cpp" />
+    <ClCompile Include="src\metawear\peripheral\cpp\ibeacon.cpp" />
+    <ClCompile Include="src\metawear\peripheral\cpp\led.cpp" />
+    <ClCompile Include="src\metawear\peripheral\cpp\neopixel.cpp" />
+    <ClCompile Include="src\metawear\platform\cpp\async_creator.cpp" />
+    <ClCompile Include="src\metawear\platform\cpp\memory.cpp" />
+    <ClCompile Include="src\metawear\platform\cpp\task.cpp" />
+    <ClCompile Include="src\metawear\platform\cpp\threadpool.cpp" />
+    <ClCompile Include="src\metawear\processor\cpp\dataprocessor.cpp" />
+    <ClCompile Include="src\metawear\processor\cpp\dataprocessor_config.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\accelerometer.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\accelerometer_bosch.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\accelerometer_mma8452q.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\ambientlight_ltr329.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\barometer_bosch.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\colordetector_tcs34725.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\conductance.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\gpio.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\gyro_bmi160.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\humidity_bme280.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\magnetometer_bmm150.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\multichanneltemperature.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\proximity_tsl2671.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\sensor_fusion.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\serialpassthrough.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\switch.cpp" />
+    <ClCompile Include="src\metawear\sensor\cpp\utils.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
